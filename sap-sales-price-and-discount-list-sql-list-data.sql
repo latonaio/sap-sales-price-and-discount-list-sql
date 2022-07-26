@@ -1,8 +1,8 @@
-CREATE TABLE `sap_internal_price_discount_list_items_data`
+CREATE TABLE `sap_sales_price_and_discount_list_list_data`
 (
- `ObjectID`                                  varchar(70) DEFAULT NULL,               
+ `ObjectID`                                  varchar(70) NOT NULL,               
  `ParentObjectID`                            varchar(70) DEFAULT NULL,
- `PriceDiscountListID`                       varchar(60) NOT NULL,
+ `PriceDiscountListID`                       varchar(60) DEFAULT NULL,
  `Amount`                                    varchar(80) DEFAULT NULL,
  `AmountCurrencyCode`                        varchar(3) DEFAULT NULL,
  `PriceUnitContent`                          varchar(80) DEFAULT NULL,
@@ -14,10 +14,6 @@ CREATE TABLE `sap_internal_price_discount_list_items_data`
  `ProductCategoryID`                         varchar(50) DEFAULT NULL,
  `EntityLastChangedOn`                       varchar(80) DEFAULT NULL,
  `ETag`                                      varchar(80) DEFAULT NULL,		                                                
-    PRIMARY KEY (`PriceDiscountListID`)
+    PRIMARY KEY (`ObjectID`)
 ) ENGINE = InnoDB
  DEFAULT CHARSET = utf8mb4;
-
-
-
-
